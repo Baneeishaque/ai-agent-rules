@@ -102,6 +102,22 @@ This file documents all personal rules configured in Warp AI Agent for backup an
 - "Let's create a rule that..."
 - "Modify the rule for..."
 
+### 8. GitLab Repos: Auto-clone to Lab_Data with glab CLI
+**Rule ID:** `[To be assigned by Warp]`
+**Description:** When cloning GitLab repositories, always use 'glab repo clone' command instead of 'git clone' to leverage GitLab CLI authentication and features. Clone all repositories to ~/Lab_Data/ directory following the hyphenated naming convention (matching the original repo name). Use 'glab repo list' or 'glab repo search' to find repositories before cloning.
+
+**Key Behaviors:**
+- Use `glab repo clone` instead of `git clone` for GitLab repos
+- Default location: `~/Lab_Data/`
+- Maintain original repository naming (hyphenated)
+- Leverage GitLab CLI authentication
+- Works with GitLab.com and self-hosted instances
+
+**Usage Examples:**
+- `glab repo clone group/project-name` → `~/Lab_Data/project-name/`
+- Search first: `glab repo list` or `glab repo search keyword`
+- Self-hosted: Configure with `glab auth login --hostname your-gitlab.com`
+
 ## Configured Codebases
 
 ### Sample_Scripts
@@ -127,4 +143,4 @@ This file documents all personal rules configured in Warp AI Agent for backup an
 ## Last Updated
 **Date:** 2025-08-15
 **By:** sample-user
-**Total Rules:** 7
+**Total Rules:** 8
